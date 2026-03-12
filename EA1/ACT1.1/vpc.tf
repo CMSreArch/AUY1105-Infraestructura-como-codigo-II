@@ -4,7 +4,7 @@ resource "aws_vpc" "mi_vpc" {
   enable_dns_support   = true
   enable_dns_hostnames = true
   tags = {
-    Name = "mi-vpc"
+    Name = "VPC principal"
   }
 }
 
@@ -58,7 +58,6 @@ resource "aws_subnet" "subnet_privada_2" {
 
 # Crear un NAT Gateway
 resource "aws_eip" "nat_eip" {
-  vpc = true
   tags = {
     Name = "nat-eip"
   }
